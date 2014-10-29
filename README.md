@@ -5,7 +5,7 @@ This is a work in progress :)
 
 ##How to run this
 
--Make sure Node.js is installed
--Make sure Gulp is installed
--CD into the project
--Run `npm install` and then `gulp`
+- Make sure [Node.js](http://nodejs.org/) is installed
+- Make sure [Gulp.js](http://gulpjs.com/) is installed
+- CD into the project
+- Run `npm install` and then `gulp`
