@@ -15,3 +15,9 @@
 //Partials
 @import "partials/styleguide";  //Simple styles for the actual style guide page (not components)
 @import "partials/buttons";
+
+
+button {
+	border: 0;
+	padding: 0;
+}
