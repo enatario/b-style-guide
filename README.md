@@ -9,3 +9,4 @@ This is a work in progress :)
 - Make sure [Gulp.js](http://gulpjs.com/) is installed
 - CD into the project
 - Run `npm install` and then `gulp`
+- The project should be running on localhost:8080
