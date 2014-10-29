@@ -1,0 +1,17 @@
+//Dependencies
+@import "compass/css3";
+@import "compass/typography/vertical_rhythm";
+@import "compass/reset";
+@import "breakpoint";
+
+//Base Styles
+@import "base/variables";
+@import "base/mixins";
+@import "base/utilities";
+@import "base/layout";
+@import "base/typography";
+
+
+//Partials
+@import "partials/styleguide";  //Simple styles for the actual style guide page (not components)
+@import "partials/buttons";

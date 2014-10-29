@@ -1,0 +1,134 @@
+// Buttons!
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Buttons buttons buttons
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Base
+// Based on CSS Wizardry's 'Beutons'
+// http://csswizardry.com/beautons/
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ 
+
+
+//Button color mixin
+@mixin btn-color($color) {
+	background-color: $color;
+	border: 1px solid shade($color, 20);
+
+	&:hover:not(.btn--disabled), 
+	&:active:not(.btn--disabled), 
+	&:focus:not(.btn--disabled) {
+		background-color: shade($color, 10);
+	}
+}
+
+//Button base
+.btn {
+	@extend %inline-block;			// Inline-block for box model properties
+	@extend %centertext;  			// Text align center
+	@extend %visible;				// Fixes spacing issue in IE7
+	vertical-align: middle;			// Line up buttons in groups`
+	border: none;					// Normalize styles
+	padding: 0 1em;					// Consistent inner spacing
+	line-height: 3;					// Consistent inner spacing
+    height: 3em; 					// Consistent inner spacing
+	font-size: 100%;				// Inherit font styles
+    cursor:pointer;					// Force all buttons to appear clickable
+	@extend %no-underline;			// Removes text decoration from anchor links
+	@include border-radius(3px);	// Default border radius
+	@extend %benton;				// Default font family 
+	transition: $ease;				// Default hover transition timing
+	@include btn-color($white);		// Default border/bg/hover styles
+	color: $black;					// Default text color
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// States
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+.btn--disabled {
+	opacity: 0.5;
+	cursor: not-allowed;
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Colors
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//Primary
+.btn--primary {
+	@include btn-color($beige);
+}
+
+
+//Accent
+.btn--accent {
+	@include btn-color($globe-red);
+
+	//Accounts for bright color
+	color: $white;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Sizes
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//Big
+.btn--large {
+	font-size: 120%;
+}
+
+//Small
+.btn--small {
+	font-size: 75%;
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Widths
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//Full Width
+.btn--full {
+	@extend %full-width;
+}
+
+//Half Width
+.btn--half {
+	width: 50%;
+}
+
+
+
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Styles
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//Inverse Button
+.btn--inverse {
+	border-color: $white;
+	color: $white;
+	background-color: transparent;
+
+	&:hover {
+		background-color: transparent;
+		opacity: 0.7;
+	}
+}
+
+//Icon Button
+
+//Labled Icon
+
+//Button Groups
+
+//Social Media Buttons

@@ -1,0 +1,25 @@
+// Layout!
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Baller layout rules
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+//Border box yo
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+//Site width
+$site-width: 600px;
+
+.container {
+	width: 90%;
+	max-width: $site-width;
+	@extend %automargin;
+}
+
+//Breakpoints
+$main-bp: max-width 450px;

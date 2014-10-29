@@ -1,0 +1,93 @@
+@include font-face ('Miller', 
+  font-files(
+    '/fonts/miller/miller.ttf', ttf, 
+    '/fonts/miller/miller.woff', woff,
+    '/fonts/miller/miller.svg', svg,
+    '/fonts/miller/miller.eot')
+  );
+
+@include font-face ('Benton', 
+  font-files(
+    '/fonts/benton/benton.ttf', ttf, 
+    '/fonts/benton/benton.woff', woff,
+    '/fonts/benton/benton.svg', svg,
+    '/fonts/benton/benton.eot')
+  );
+
+
+
+%miller{ 
+  font-family: 'Miller', Times New Roman, Times, Georgia, serif;
+  font-weight: normal;
+  letter-spacing: normal;
+}
+
+%benton{ 
+  font-family: "Benton", Arial, Helvetica, sans-serif;
+}
+
+%serif{ 
+  font-family: "Georgia", Times New Roman, Times, serif;
+}
+
+%sans{ 
+  font-family: "Helvetica", Arial, sans-serif;
+}
+
+
+
+
+$base-font-size: 12px;
+$base-line-height: 16px;
+$rhythm-unit: "rem";
+$rem-with-px-fallback: false;
+
+$type-scale: (
+  tiny: (
+    font-size: 8px,
+    base-lines: 0.75
+  ),
+  small: (
+    font-size: 10px,
+    base-lines: 1
+   ),
+  base: (
+   font-size: $base-font-size,
+   base-lines: 1.2
+  ),
+  medium: (
+    font-size: 16px,
+    base-lines: 1.5
+  ),
+  large: (
+    font-size: 24px,
+    base-lines: 2
+  ),
+  xlarge: (
+    font-size: 38px,
+    base-lines: 2.5
+  ),
+
+  xxlarge: (
+    font-size: 52px,
+    base-lines: 3
+  )
+);
+
+@mixin type-scale($scale, $map: $type-scale) {
+  $font-size: map-fetch($map, $scale font-size);
+  $base-lines: map-fetch($map, $scale base-lines);
+  @include adjust-font-size-to($font-size, $base-lines);
+}
+
+
+
+//Headings
+
+#{headings()} {
+    font-style: normal;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+

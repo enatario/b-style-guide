@@ -1,0 +1,49 @@
+// Style Guide style!
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// So very meta, but the style guide 
+// needs to be styled
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+.entry-title {
+	@extend %miller;
+	@include type-scale(xlarge);
+	margin-bottom: 1em;
+
+	&:after {
+		@extend %block;
+		border-bottom: 10px solid black;
+	}
+}
+
+
+.entry-content {
+	margin-bottom: 4em;
+	color: $dk-gray;
+}
+
+.entry-overline {
+	@extend %benton;
+	@include type-scale(small);
+	border-bottom: $border;
+	margin-bottom: 1em;
+}
+
+.entry-info {
+	@extend %serif;
+	@include type-scale(base);
+}
+
+.entry-example {
+	margin: 1em 0;
+}
+
+
+//Give UI Elements some space around each other
+.btn {
+}
+
+//Black 
+.entry-inverse {
+	padding: 1em 1em 0 1em;
+	background: black;
+}

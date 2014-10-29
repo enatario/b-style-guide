@@ -1,0 +1,91 @@
+// Layout!
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+// Common reusable patterns
+// ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~ ~
+
+
+//Widths
+%full-width {
+  width: 100%;
+}
+
+
+//Displays
+%block {
+  display: block;
+}
+
+%inline-block {
+	display: inline-block;
+}
+
+%inline {
+	display: inline;
+}
+
+%invisible {
+	display: none;
+}
+
+%automargin {
+  margin: 0 auto;
+}
+
+//Overflows
+%scroll {
+	overflow: scroll;
+}
+
+%hidden {
+	overflow: hidden;
+}
+
+%visible {
+	overflow: visible;
+}
+
+
+//Alignment
+%centertext {
+	text-align: center;
+}
+
+
+//Positions
+%fixed {
+	position: fixed;
+}
+
+%relative {
+	position: relative;
+}
+
+%absolute {
+	position: absolute;
+}
+
+
+//Responsive images
+%fluid-img {
+  @extend %full-width;
+  max-width: 100%; 
+}
+
+//List styles
+%inline-list {
+
+}
+
+%unstyled-list {
+	list-style-type:none;
+	margin: 0;
+	padding: 0;
+
+		li {
+			@extend %block;
+		}
+}
+
+%no-underline {
+	text-decoration: none;
+}
