@@ -20,7 +20,10 @@
             <h1 class="entry-title">Buttons</h1>
             
             <section class="entry-content">
-                <h2 class="entry-overline">Default</h2>
+                <div class="entry-overline">
+                    <h2>Default</h2>
+                    <!-- <button class="show-trigger">Show Code</button> -->
+                </div>
                 <p class="entry-info">To create a button, add the <code>btn</code> classname to any <code>a</code> or <code>button</code> element. This base class must be used alongside all modifiers. The default button is also a <a href="#">secondary</a> button. As a note, buttons widths are not fixed&mdash;they are sized relative to their default padding of interior elements (with the exception of a <a href="#">width-modifying class</a>).</p>
 
                 <div class="entry-example">
@@ -97,11 +100,25 @@
             </section>
 
             <section class="entry-content">
-                <h2 class="entry-overline">Icons</h2>
-                <p class="entry-info">To give more meaning to a button, icons can be used alongside button text. A button can simply be an icon as well. There are a variety of classnames that correspond with icons. Please see the <a href="#">icon page</a> for reference.</p>
+                <h2 class="entry-overline">Labeled Icons</h2>
+                <p class="entry-info">To give more meaning to a button, icons can be used alongside button text. Use a <code>span</code> with an <code>icon--[classname]</code> within the <code>button</code> or <code>a</code> element to place an icon. There are a variety of icon class names&mdash;some that correspond to unicode characters and others to svg elements. Please see the <a href="#">icon page</a> for reference.</p>
                 
                 <div class="entry-example">
-                    <button class="btn btn--left">Go left</button>
+                    <button class="btn">
+                        <span class="icon icon--leftarrow"></span>
+                        Go back
+                    </button>
+
+                    <button class="btn">
+                        <span class="icon icon--close"></span>
+                        Close
+                    </button>
+
+                    <button class="btn">
+                        View more
+                        <span class="icon icon--ellip"></span>
+                    </button>
+
                 </div>
             </section>
 

@@ -18,7 +18,7 @@ $site-width: 600px;
 .container {
 	width: 90%;
 	max-width: $site-width;
-	@extend %automargin;
+	margin: 0 auto;
 }
 
 //Breakpoints

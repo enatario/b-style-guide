@@ -26,16 +26,16 @@
 
 //Button base
 .btn {
-	@extend %inline-block;			// Inline-block for box model properties
-	@extend %centertext;  			// Text align center
-	@extend %visible;				// Fixes spacing issue in IE7
+	display:inline-block;			// Inline-block for box model properties
+	text-align: center;  			// Text align center
+	overflow: visible;				// Fixes spacing issue in IE7
 	vertical-align: middle;			// Line up buttons in groups`
 	border: none;					// Normalize styles
-	padding: 1em 1.5em;				// Consistent inner spacing
+	padding: 0.75em 1.5em;				// Consistent inner spacing
 	line-height: 1;					// Consistent inner spacing
 	font-size: 100%;				// Inherit font styles
     cursor:pointer;					// Force all buttons to appear clickable
-	@extend %no-underline;			// Removes text decoration from anchor links
+	text-decoration: none;			// Removes text decoration from anchor links
 	@include border-radius(3px);	// Default border radius
 	@extend %benton;				// Default font family 
 	transition: $ease;				// Default hover transition timing
@@ -98,7 +98,7 @@
 
 //Full Width
 .btn--full {
-	@extend %full-width;
+	width: 100%;
 }
 
 //Half Width
@@ -127,9 +127,22 @@
 }
 
 //Icon Button
-.btn--left:before {
+.icon--leftarrow:before {
+	display: inline-block;
 	content:$left-arrow;
-	padding: 0 0.5em;
+	padding: 0;
+}
+
+.icon--close:before {
+	display: inline-block;
+	content:$close;
+	padding: 0;
+}
+
+.icon--ellip:before {
+	display: inline-block;
+	content:$ellip;
+	padding: 0;
 }
 
 //Labled Icon
